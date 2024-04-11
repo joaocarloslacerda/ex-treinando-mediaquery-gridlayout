@@ -29,7 +29,7 @@ body{
     color: #1565ab;
 }
 .aside{
-    background-color: #AA6DC4;
+    background-color: #d590f2;
     grid-area: aside;
 }
 .main{
@@ -39,4 +39,38 @@ body{
 .footer{
     background-color: #8FBCB3;
     grid-area: footer;
+}
+
+@media (max-width: 1024px){
+    body{
+        grid-template-columns: 1fr;
+        grid-template-rows: 0.1fr 0.3fr 0.5fr 0.1fr;
+        grid-template-areas: 
+            "header"
+            "aside"
+            "main"
+            "footer"
+        ;
+    }
+    .header{
+        color: #8d12c2;
+    }
+}
+
+@media (max-width: 640px){
+    body{
+        grid-template-columns: 1fr;
+        grid-template-rows: 0.1fr 0.8fr 0.1fr;
+        grid-template-areas: 
+            "header"
+            "main"
+            "footer"
+        ;
+    }
+    .header{
+        color: red;
+    }
+    .aside{
+        display: none;
+    }
 }
